@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+header{
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8%;
+    transition: .3s;
+}
+.logo{
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 0.8;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar{
+    display:flex;
+  }
+  .navbar a{
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: all .40s ease;
+    text-decoration: none;
+    font-family: 'Inter', serif;
+  }
+  .navbar a:hover{
+    background: rgba(255, 255, 255, 0);
+    color: grey;
+    opacity: 0.7;
+  }
+  .icons{
+      display: inline-block;
+  }
+  .icons i {
+      color: black;
+      font-size: 22px;
+      margin-left: 15px;
+  }
+  .icons i:hover{
+      opacity: 0.7;
+  }
+  .iconshome{
+    display: inline-block;
+  }
+  .iconshome i {
+    color: transparent;
+    font-size: 22px;
+    margin-left: 15px;
+  }
+  .iconshome i:hover{
+    opacity: 0.7;
+  }
+@media (max-width: 800px){
+	header{
+		padding: 15px 8%;
+	}
+	.navbar{
+		top: -500px;
+		left: 0;
+		right: 0;
+		position: absolute;
+		flex-direction: column;
+		background: white;
+		box-shadow: 0px 2px 18px 0 rgba(128, 128, 128, 0.267);
+		transition: all .40s ease;
+	}
+	.navbar a{
+		display: block;
+		padding: 1rem;
+		margin: 0.5rem;
+	}
+	.navbar.active{
+		top: 100%;
+	}
+}
